@@ -6,6 +6,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import Booking from './Pages/Booking/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
+import AddService from './Pages/AddService/AddService';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
@@ -28,6 +30,12 @@ function App() {
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
+            <Route path="/addService">
+              <AddService></AddService>
+            </Route>
+            <Route path="/manageAllOrders">
+                <ManageAllOrders></ManageAllOrders>
+            </Route>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

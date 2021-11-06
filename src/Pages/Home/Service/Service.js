@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 const Service = ({ service }) => {
     // const {service} = props;
-    const { id, name,  description, img } = service;
+    const { _id, firstName ,  description, img } = service;
     return (
         <div className="service pb-3">
             <img src={img} alt="" />
-            <h3>{name}</h3>
-            <p className="px-3">{description}</p>
-            <Link to={`/booking/${id}.${name}`}>
-                <button className="btn btn-dark">ORDER Now {name.toLowerCase()}</button>
+            <h3>{service . firstName}</h3>
+            <p className="px-3">{service.description}</p>
+            <Link to={`/booking/${_id}`} >
+                <button className="btn btn-dark"> ORDER Now </button>
             </Link>
         </div>
     );
